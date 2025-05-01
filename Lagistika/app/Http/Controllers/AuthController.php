@@ -39,9 +39,9 @@ class AuthController extends Controller
         }
 
         if (password_verify($user_login['password'], $user->password)) {
-            $token = $user->createToken('auth-token')->plainTextToken;
+            $token = $user->createToken('auth_token')->plainTextToken;
             return response()->json([
-                "message" => "Foydalanuvchi topildi",
+                "message" => "Muvaffaqiyatli tizmga kirdingiz",
                 'token' => $token
             ]);
         }else{

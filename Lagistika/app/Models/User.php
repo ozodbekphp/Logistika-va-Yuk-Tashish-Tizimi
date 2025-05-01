@@ -31,9 +31,15 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+
+    //  Foydalanuvchida malum bir tabledagi columnlarni berkitish yani polimorhizm
     protected $hidden = [
         'password',
         'remember_token',
+        'role',
+        'email_verified_at',
+        'created_at',
+        'updated_at'
     ];
 
     /**

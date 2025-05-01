@@ -16,6 +16,7 @@ GET /api/shipments/{id} - Muayyan yuk haqida ma’lumot
 PUT /api/shipments/{id}/status - Yuk holatini yangilash
 DELETE /api/shipments/{id} - Yukni o‘chirish
 
+
 // Kuryer
 GET /api/courier/shipments - Kuryer uchun mavjud yuklar
 POST /api/courier/shipments/{id}/accept - Yukni qabul qilish
