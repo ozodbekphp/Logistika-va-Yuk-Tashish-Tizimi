@@ -13,7 +13,7 @@ class Shipment extends Model
     use HasFactory;
 
 
-    protected $fillable = ['user_id', 'name', 'weight', 'size', 'yuk_olish_joyi', 'yuk_qabul_qilish_joyi', 'shipment_id'];
+    protected $fillable = ['shipment_id' , 'user_id', 'name', 'weight', 'size', 'yuk_olish_joyi', 'yuk_qabul_qilish_joyi'];
 
     protected $guarded = [];
     protected $primaryKey = 'shipment_id';

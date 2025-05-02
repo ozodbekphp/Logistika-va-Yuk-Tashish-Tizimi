@@ -11,12 +11,7 @@ class ShipmentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-
-
-
-    }
+    public function index() {}
 
     /**
      * Show the form for creating a new resource.
@@ -29,17 +24,20 @@ class ShipmentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreShipmentRequest $request)
+    public function store(StoreShipmentRequest $request, $id)
     {
         $user = auth()->user();
 
-        if(!$user){
+        if (!$user) {
             return response()->json(["message" => "Iltimos oldim ro'yxatdan o'ting"]);
-        }else{
-           $user->create($request->validated());
-           
-           return response()->json(['message' => 'Yuk muvaffaqiyali elon qilindi sizga tez orqada aloqaga chiqishadi']);
+        } else {
+            if ($user->id != $id)
+            {
+                return response()->json([ "message" =>  "Iltimos o'z idingizni kiriting!!!!"]);
+            }
+                $user->create($request->validated());
 
+            return response()->json(['message' => 'Yuk muvaffaqiyali elon qilindi sizga tez orqada aloqaga chiqishadi']);
         }
     }
 
@@ -70,8 +68,5 @@ class ShipmentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Shipment $shipment)
-    {
-
-    }
+    public function destroy(Shipment $shipment) {}
 }
