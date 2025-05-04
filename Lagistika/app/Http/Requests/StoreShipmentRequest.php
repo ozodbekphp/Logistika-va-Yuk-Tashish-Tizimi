@@ -22,13 +22,11 @@ class StoreShipmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'user_id' => 'required|integer',
             'name' => 'required|string|max:255',
             'weight' =>'required|string|max:255',
             'size' => 'required|string|max:255',
             'yuk_olish_joyi' => 'required|string|max:255',
             'yuk_qabul_qilish_joyi' => 'required|string|max:255'
-            
         ];
     }
 }

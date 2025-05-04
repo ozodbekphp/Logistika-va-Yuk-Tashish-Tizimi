@@ -28,7 +28,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
 
     // Foydalanuvchi yani Mijoz yuk elon berish uchun route
-    Route::post('shipment/create/{id}' , [ShipmentController::class , 'store']);
+    Route::post('/shipment', [ShipmentController::class, 'store']);
 
 
+    Route::get('/show/shipment', [ShipmentController::class, 'index']);
 });
