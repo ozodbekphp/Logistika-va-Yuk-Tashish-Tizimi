@@ -49,6 +49,20 @@ class UserController extends Controller
         }
     }
 
+    public function delete()
+    {
+        $user = auth()->user();
+
+        if (!$user) {
+            return response()->json(['message' => "Xatolik yuz berdi siz ro'yxatdan o'tmagan ekansiz"]);
+        }
+
+        $userId = User::findOrFail($user->id);
+        $userId->delete();
+        return response()->json(['message' => "Muvaffaqiyatli o'chirildi"]);
+    }
+
+
     public function show_user_all()
     {
         return User::all();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Shipment;
 use App\Http\Requests\StoreShipmentRequest;
 use App\Http\Requests\UpdateShipmentRequest;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class ShipmentController extends Controller
@@ -82,9 +83,33 @@ class ShipmentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateShipmentRequest $request, Shipment $shipment)
+    public function update(UpdateShipmentRequest $request, $id)
     {
-        //
+        $user = auth()->user();
+        if(!$user){
+            return response()->json(['message' => "Siz ro'yxatdan o'tmagansiz"]);
+        }else{
+            if($user->id != $id){
+                return response()->json(["message" => "Siz faqat o'z yukingizni yangilay olasiz"]);
+            }else{
+                $status = Shipment::where('status' , 'Kutilmoqda');
+                if(){
+
+
+                }
+                try{
+
+                $shipment = Shipment::findOrFail($id);
+                $shipment->update($request->validated());
+                return response()->json(['message' => 'Yuk yangilandi']);
+
+                }catch(ModelNotFoundException $e){
+                  return response()->json(['message' => 'xatolik yuz berdi']);
+                }
+            }
+        }
+
+
     }
 
     /**

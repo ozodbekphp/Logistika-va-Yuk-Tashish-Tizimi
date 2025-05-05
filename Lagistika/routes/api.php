@@ -24,12 +24,17 @@ Route::middleware('auth:sanctum')->group(function () {
     // Foydalanuvchini o'z profilini ko'rish uchun route
     Route::get('/profile', [UserController::class, 'index']);
     // Foydalanuvchi o'z malumotlarini yangilash uchun route
-    Route::put('/profile_update/{id}', [UserController::class, 'update']);
+    Route::put('/profile/update/{id}', [UserController::class, 'update']);
+    // Foydalanuvchi o'z akkountini o'chirish uchun route url
+    Route::delete('/profile/delete' , [UserController::class , 'delete']);
+
 
 
     // Foydalanuvchi yani Mijoz yuk elon berish uchun route
     Route::post('/shipment', [ShipmentController::class, 'store']);
-
-
+    // Foydalanuvchi o'zi yuk elonini ko'rish uchun Route Url
     Route::get('/show/shipment', [ShipmentController::class, 'index']);
+    // Foydalanuvchi o'z yukini yangilashi mumkin
+
+
 });
