@@ -13,29 +13,29 @@ class ShipmentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index() {
+    public function index()
+    {
 
         $user = auth()->user();
 
-        if(!$user){
+        if (!$user) {
             return response()->json(["message" => "Iltimos ro'yxatdan o'ting"]);
         }
 
 
-        $buyurtma =  Shipment::where('user_id' , $user->id)->get();
-        $buyurtma = $buyurtma->map(function($item){
+        $buyurtma =  Shipment::where('user_id', $user->id)->get();
+        $buyurtma = $buyurtma->map(function ($item) {
             return [
-                 'buyurtma id' => $item->id,
-                 'buyurtma nomi' => $item->name,
-                 "buyurtma o'g'irligi" => $item->weight,
-                 'buyurtma hajmi' => $item->size,
-                 'Buyurtma status' => $item->status,
-                 'yukni olish joyi' => $item->yuk_olish_joyi,
-                 'yukni yetkazish joyi' => $item->yuk_qabul_qilish_joyi
+                'buyurtma id' => $item->id,
+                'buyurtma nomi' => $item->name,
+                "buyurtma o'g'irligi" => $item->weight,
+                'buyurtma hajmi' => $item->size,
+                'Buyurtma status' => $item->status,
+                'yukni olish joyi' => $item->yuk_olish_joyi,
+                'yukni yetkazish joyi' => $item->yuk_qabul_qilish_joyi
             ];
         });
         return response()->json($buyurtma);
-
     }
 
     /**
@@ -67,10 +67,7 @@ class ShipmentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Shipment $shipment)
-    {
-
-    }
+    public function show(Shipment $shipment) {}
 
     /**
      * Show the form for editing the specified resource.
@@ -86,30 +83,27 @@ class ShipmentController extends Controller
     public function update(UpdateShipmentRequest $request, $id)
     {
         $user = auth()->user();
-        if(!$user){
+        if (!$user) {
             return response()->json(['message' => "Siz ro'yxatdan o'tmagansiz"]);
-        }else{
-            if($user->id != $id){
+        } else {
+            if ($user->id != $id) {
                 return response()->json(["message" => "Siz faqat o'z yukingizni yangilay olasiz"]);
-            }else{
-                $status = Shipment::where('status' , 'Kutilmoqda');
-                if(){
-
-
-                }
-                try{
-
+            } else {
                 $shipment = Shipment::findOrFail($id);
-                $shipment->update($request->validated());
-                return response()->json(['message' => 'Yuk yangilandi']);
+                if ($shipment->status == 'Kutmoqda') {
+                    try {
 
-                }catch(ModelNotFoundException $e){
-                  return response()->json(['message' => 'xatolik yuz berdi']);
+                        $shipment = Shipment::findOrFail($id);
+                        $shipment->update($request->validated());
+                        return response()->json(['message' => 'Yuk yangilandi']);
+                    } catch (ModelNotFoundException $e) {
+                        return response()->json(['message' => 'xatolik yuz berdi']);
+                    }
+                }else{
+                    return response()->json(["message" => "Yukni endi yangilab bo'lmaydi"]);
                 }
             }
         }
-
-
     }
 
     /**
