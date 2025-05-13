@@ -17,7 +17,7 @@ Route::post('/register', [AuthController::class, 'register']);
 // Foydalanuvchilar uchun login qilish Route
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::get('user_all', [UserController::class, 'show_user_all']);
+Route::get('/user_all', [UserController::class, 'show_user_all']);
 // ro'yxatdan o'tgan foydalanuvchilar profilini ko'rish va o'zgartish uchun route
 
 Route::middleware('auth:sanctum')->group(function () {
@@ -26,7 +26,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // Foydalanuvchi o'z malumotlarini yangilash uchun route
     Route::put('/profile/update/{id}', [UserController::class, 'update']);
     // Foydalanuvchi o'z akkountini o'chirish uchun route url
-    Route::delete('/profile/delete' , [UserController::class , 'delete']);
+    Route::delete('/profile/delete', [UserController::class, 'delete']);
 
 
 
@@ -35,6 +35,5 @@ Route::middleware('auth:sanctum')->group(function () {
     // Foydalanuvchi o'zi yuk elonini ko'rish uchun Route Url
     Route::get('/show/shipment', [ShipmentController::class, 'index']);
     // Foydalanuvchi o'z yukini yangilashi mumkin
-
-
+    Route::put('/shipment/update/{id}', [ShipmentController::class, 'update']);
 });
