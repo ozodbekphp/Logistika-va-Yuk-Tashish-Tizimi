@@ -28,7 +28,7 @@ class KuryerController extends Controller
                 {
                     return response()->json(["message" => "Bunday buyurtma id topilmadi"]);
                 }else{
-             
+                    
                 }
             }
         }

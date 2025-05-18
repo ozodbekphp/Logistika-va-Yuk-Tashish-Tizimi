@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminReportController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ShipmentController;
 use App\Http\Controllers\UserController;
@@ -36,4 +38,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/show/shipment', [ShipmentController::class, 'index']);
     // Foydalanuvchi o'z yukini yangilashi mumkin
     Route::put('/shipment/update/{id}', [ShipmentController::class, 'update']);
+
+
+    // Admin uchun api route
+    // Barcha Yuklarni ko'rish uchun api route
+    Route::get('admin/all/shipments', [AdminController::class, 'index']);
+
+    // Admin uchun kunlik va haftalik statistika
+    Route::get('admin/statistika', [AdminReportController::class, 'index']);
 });
