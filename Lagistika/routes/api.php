@@ -13,6 +13,10 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
+Route::fallback(function () {
+    return response()->view('errors.404', [], 404);
+});
+
 
 // Foydalanuvchilar uchun ro'yxatdan o'tish uchun Route
 Route::post('/register', [AuthController::class, 'register']);

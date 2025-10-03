@@ -16,7 +16,7 @@ class KuryerController extends Controller
      */
     public function index(Request $request , $id)
     {
-        $user = auth()->user();
+        $user = auth('sanctum')->user();
 
         if (!$user) {
             return response()->json(["message"  => "Iltimos avval ro'yxatdan o'ting"]);
@@ -55,7 +55,7 @@ class KuryerController extends Controller
      */
     public function show(Kuryer $kuryer, $id)
     {
-        $auth = auth()->user();
+        $auth = auth('sanctum')->user();
         if (!$auth) {
             return response()->json(["message" > "Iltimos Ro'yxatdan o'ting"]);
         } else {

@@ -22,7 +22,7 @@ class StoreAdminRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            
         ];
     }
 }

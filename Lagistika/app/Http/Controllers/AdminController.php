@@ -15,16 +15,14 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $admin = auth()->user();
-        $admin_status = User::where('role' ,1);
+        $admin = auth('sanctum')->user();
+        $admin_status = User::where('role', 1);
 
-        if($admin && $admin_status)
-        {
+        if ($admin && $admin_status) {
 
             $all_shipment = Shipment::all();
             return response()->json($all_shipment);
-
-        }else{
+        } else {
             return response()->json(["message" => "Siz ro'yxatdan o'tmagansiz yoki Admin emassiz"]);
         }
     }
@@ -34,7 +32,13 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        $admin = auth('sanctum')->user();
+        $admin_status = User::where('role', 1);
+
+        if (!$admin && $admin_status) {
+            return response()->json(["message" => "Siz ro'yxatdan o'tmagan ekansiz yoki Admin emassiz"]);
+        }
+        
     }
 
     /**
