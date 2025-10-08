@@ -16,7 +16,7 @@ class ShipmentController extends Controller
     public function index()
     {
 
-        $user = auth()->user();
+        $user = auth('sanctum')->user();
 
         if (!$user) {
             return response()->json(["message" => "Iltimos ro'yxatdan o'ting"]);
@@ -51,7 +51,7 @@ class ShipmentController extends Controller
      */
     public function store(StoreShipmentRequest $request)
     {
-        $user = auth()->user();
+        $user = auth('sanctum')->user();
 
         if (!$user) {
             return response()->json(["message" => "Iltimos oldim ro'yxatdan o'ting"]);
@@ -82,7 +82,7 @@ class ShipmentController extends Controller
      */
     public function update(UpdateShipmentRequest $request, $id)
     {
-        $user = auth()->user();
+        $user = auth('sanctum')->user();
         if (!$user) {
             return response()->json(['message' => "Siz ro'yxatdan o'tmagansiz"]);
         } else {

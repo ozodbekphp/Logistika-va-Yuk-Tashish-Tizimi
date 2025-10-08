@@ -14,16 +14,16 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user =  auth()->user();
+        $user =  auth('sanctum')->user();
         if ($user) {
-            return auth()->user();
+            return auth('sanctum')->user();
         } else {
             return response()->json(["message" => "Token xato"]);
         }
     }
     public function update(UpdateUserRequest $request, $id)
     {
-        $user  = auth()->user();
+        $user  = auth('sanctum')->user();
         if (!$user) {
             return response()->json(['message' => "Siz hali ro'yxatdan o'tmagansiz"]);
         }
@@ -51,7 +51,7 @@ class UserController extends Controller
 
     public function delete()
     {
-        $user = auth()->user();
+        $user = auth('sanctum')->user();
 
         if (!$user) {
             return response()->json(['message' => "Xatolik yuz berdi siz ro'yxatdan o'tmagan ekansiz"]);
