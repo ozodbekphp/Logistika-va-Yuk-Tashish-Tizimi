@@ -11,15 +11,11 @@ class AdminRepository implements AdminInterface
 {
     public function index()
     {
-        $admin = auth('sanctum')->user();
-        $admin_status = User::where('role', 1);
-
-        if ($admin && $admin_status) {
-
-            $all_shipment = Shipment::all();
-            return response()->json($all_shipment);
-        } else {
-            return response()->json(["message" => "Siz ro'yxatdan o'tmagansiz yoki Admin emassiz"]);
+        if (auth('sanctum')->user()->role === 1 || auth('sanctum')->user()->role === 2) {
+            $shipments = Shipment::all();
+            return response()->json(["data" => $shipments]);
+        }else{
+            return response()->json(["message" => "Ro'yxatdan o'tmaga ekansiz yoki Admin emas ekansiz!"]);
         }
     }
 }

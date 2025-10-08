@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminReportController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KuryerController;
 use App\Http\Controllers\ShipmentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -51,5 +52,10 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Admin uchun kunlik va haftalik statistika
     Route::get('admin/statistika', [AdminReportController::class, 'index']);
+
+
+    # Kuryer yukni qabul qilib olish
+    Route::post('kuryer/shipment/take', [KuryerController::class , 'kuryer_take_shipment']);
+    
 });
 
