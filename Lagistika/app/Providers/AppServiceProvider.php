@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+// use Illuminate\Support\ServiceProvider;
+
+use App\Interfaces\LoginInterface;
+use App\Repositories\LoginRepositories;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->app->singleton(LoginInterface::class , LoginRepositories::class);
     }
 }

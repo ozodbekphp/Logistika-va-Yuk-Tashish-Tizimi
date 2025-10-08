@@ -1,0 +1,403 @@
+[2025-10-03 10:12:59] local.ERROR: No hint path defined for [mail]. (View: /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/resources/views/emails/welcome.blade.php) {"exception":"[object] (Illuminate\\View\\ViewException(code: 0): No hint path defined for [mail]. (View: /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/resources/views/emails/welcome.blade.php) at /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:111)
+[stacktrace]
+#0 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Illuminate\\View\\Engines\\CompilerEngine->handleViewException()
+#1 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(74): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#2 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#3 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#4 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#5 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(444): Illuminate\\View\\View->render()
+#6 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(419): Illuminate\\Mail\\Mailer->renderView()
+#7 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(312): Illuminate\\Mail\\Mailer->addContent()
+#8 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(206): Illuminate\\Mail\\Mailer->send()
+#9 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Support/Traits/Localizable.php(19): Illuminate\\Mail\\Mailable->{closure:Illuminate\\Mail\\Mailable::send():199}()
+#10 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(199): Illuminate\\Mail\\Mailable->withLocale()
+#11 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/SendQueuedMailable.php(82): Illuminate\\Mail\\Mailable->send()
+#12 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Mail\\SendQueuedMailable->handle()
+#13 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#14 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#15 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#16 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#17 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Bus/Dispatcher.php(132): Illuminate\\Container\\Container->call()
+#18 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(169): Illuminate\\Bus\\Dispatcher->{closure:Illuminate\\Bus\\Dispatcher::dispatchNow():129}()
+#19 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}()
+#20 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Bus/Dispatcher.php(136): Illuminate\\Pipeline\\Pipeline->then()
+#21 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php(125): Illuminate\\Bus\\Dispatcher->dispatchNow()
+#22 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(169): Illuminate\\Queue\\CallQueuedHandler->{closure:Illuminate\\Queue\\CallQueuedHandler::dispatchThroughMiddleware():120}()
+#23 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}()
+#24 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php(120): Illuminate\\Pipeline\\Pipeline->then()
+#25 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php(68): Illuminate\\Queue\\CallQueuedHandler->dispatchThroughMiddleware()
+#26 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Jobs/Job.php(102): Illuminate\\Queue\\CallQueuedHandler->call()
+#27 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Worker.php(441): Illuminate\\Queue\\Jobs\\Job->fire()
+#28 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Worker.php(391): Illuminate\\Queue\\Worker->process()
+#29 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Worker.php(177): Illuminate\\Queue\\Worker->runJob()
+#30 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Console/WorkCommand.php(148): Illuminate\\Queue\\Worker->daemon()
+#31 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Console/WorkCommand.php(131): Illuminate\\Queue\\Console\\WorkCommand->runWorker()
+#32 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Queue\\Console\\WorkCommand->handle()
+#33 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#34 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#35 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#36 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#37 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call()
+#38 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#39 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#40 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run()
+#41 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
+#42 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun()
+#43 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(197): Symfony\\Component\\Console\\Application->run()
+#44 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1234): Illuminate\\Foundation\\Console\\Kernel->handle()
+#45 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#46 {main}
+
+[previous exception] [object] (InvalidArgumentException(code: 0): No hint path defined for [mail]. at /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:111)
+[stacktrace]
+#0 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(89): Illuminate\\View\\FileViewFinder->parseNamespaceSegments()
+#1 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(75): Illuminate\\View\\FileViewFinder->findNamespacedView()
+#2 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/Factory.php(150): Illuminate\\View\\FileViewFinder->find()
+#3 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/storage/framework/views/4b46ce2123bb754b09b42cdbe2c3a8d0.php(3): Illuminate\\View\\Factory->make()
+#4 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#5 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::{closure:Illuminate\\Filesystem\\Filesystem::getRequire():120}()
+#6 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate\\Filesystem\\Filesystem->getRequire()
+#7 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(74): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#8 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#9 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#10 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#11 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(444): Illuminate\\View\\View->render()
+#12 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(419): Illuminate\\Mail\\Mailer->renderView()
+#13 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(312): Illuminate\\Mail\\Mailer->addContent()
+#14 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(206): Illuminate\\Mail\\Mailer->send()
+#15 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Support/Traits/Localizable.php(19): Illuminate\\Mail\\Mailable->{closure:Illuminate\\Mail\\Mailable::send():199}()
+#16 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(199): Illuminate\\Mail\\Mailable->withLocale()
+#17 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Mail/SendQueuedMailable.php(82): Illuminate\\Mail\\Mailable->send()
+#18 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Mail\\SendQueuedMailable->handle()
+#19 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#20 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#21 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#22 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#23 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Bus/Dispatcher.php(132): Illuminate\\Container\\Container->call()
+#24 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(169): Illuminate\\Bus\\Dispatcher->{closure:Illuminate\\Bus\\Dispatcher::dispatchNow():129}()
+#25 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}()
+#26 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Bus/Dispatcher.php(136): Illuminate\\Pipeline\\Pipeline->then()
+#27 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php(125): Illuminate\\Bus\\Dispatcher->dispatchNow()
+#28 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(169): Illuminate\\Queue\\CallQueuedHandler->{closure:Illuminate\\Queue\\CallQueuedHandler::dispatchThroughMiddleware():120}()
+#29 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():167}()
+#30 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php(120): Illuminate\\Pipeline\\Pipeline->then()
+#31 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php(68): Illuminate\\Queue\\CallQueuedHandler->dispatchThroughMiddleware()
+#32 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Jobs/Job.php(102): Illuminate\\Queue\\CallQueuedHandler->call()
+#33 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Worker.php(441): Illuminate\\Queue\\Jobs\\Job->fire()
+#34 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Worker.php(391): Illuminate\\Queue\\Worker->process()
+#35 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Worker.php(177): Illuminate\\Queue\\Worker->runJob()
+#36 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Console/WorkCommand.php(148): Illuminate\\Queue\\Worker->daemon()
+#37 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Queue/Console/WorkCommand.php(131): Illuminate\\Queue\\Console\\WorkCommand->runWorker()
+#38 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Queue\\Console\\WorkCommand->handle()
+#39 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#40 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#41 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#42 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#43 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call()
+#44 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#45 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#46 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run()
+#47 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
+#48 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun()
+#49 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(197): Symfony\\Component\\Console\\Application->run()
+#50 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1234): Illuminate\\Foundation\\Console\\Kernel->handle()
+#51 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#52 {main}
+"} 
+[2025-10-03 10:14:43] local.DEBUG: From: Laravel App <qurbonovo2008@gmail.com>
+To: qurbonovo2008@gmail.com
+Subject: Xush kelibsiz!
+MIME-Version: 1.0
+Date: Fri, 03 Oct 2025 10:14:43 +0000
+Message-ID: <36b04ad6bc7a1488b2d9d4d1774863c9@gmail.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!-- resources/views/emails/welcome.blade.php -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xush kelibsiz!</title>
+</head>
+<body>
+    <h1>Salom, Ozodbek</h1>
+    <p>Ro‘yxatdan o‘tganingiz bilan tabriklaymiz!</p>
+</body>
+</html>
+  
+[2025-10-03 10:16:46] local.DEBUG: From: Laravel App <qurbonovo2008@gmail.com>
+To: qurbonovo2008@gmail.com
+Subject: Xush kelibsiz!
+MIME-Version: 1.0
+Date: Fri, 03 Oct 2025 10:16:46 +0000
+Message-ID: <f88d66353677fae35293fe3a60014697@gmail.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!-- resources/views/emails/welcome.blade.php -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xush kelibsiz!</title>
+</head>
+<body>
+    <h1>Salom, Ozodbek</h1>
+    <p>Ro‘yxatdan o‘tganingiz bilan tabriklaymiz!</p>
+</body>
+</html>
+  
+[2025-10-04 02:46:55] local.ERROR: Command "make:repositore" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:repositore\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php:726)
+[stacktrace]
+#0 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find()
+#1 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun()
+#2 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(197): Symfony\\Component\\Console\\Application->run()
+#3 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1234): Illuminate\\Foundation\\Console\\Kernel->handle()
+#4 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#5 {main}
+"} 
+[2025-10-04 05:45:43] local.ERROR: Command "make:repository" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:repository\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php:726)
+[stacktrace]
+#0 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find()
+#1 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun()
+#2 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(197): Symfony\\Component\\Console\\Application->run()
+#3 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1234): Illuminate\\Foundation\\Console\\Kernel->handle()
+#4 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#5 {main}
+"} 
+[2025-10-04 05:48:49] local.ERROR: Command "make:repository" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:repository\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php:726)
+[stacktrace]
+#0 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find()
+#1 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun()
+#2 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(197): Symfony\\Component\\Console\\Application->run()
+#3 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1234): Illuminate\\Foundation\\Console\\Kernel->handle()
+#4 /home/ozodbek/Desktop/Logistika-va-Yuk-Tashish-Tizimi/Lagistika/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#5 {main}
+"} 
