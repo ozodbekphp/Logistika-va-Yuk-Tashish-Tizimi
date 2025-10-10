@@ -6,8 +6,15 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KuryerController;
 use App\Http\Controllers\ShipmentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ViloyatController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+
+# Hisobotni yuklab olish bazadan  xlsx ga yuklash 
+Route::get('hisobot' , [ViloyatController::class , 'exel_hisobot']);
+
+
 
 
 Route::get('/user', function (Request $request) {
@@ -57,5 +64,10 @@ Route::middleware('auth:sanctum')->group(function () {
     # Kuryer yukni qabul qilib olish
     Route::post('kuryer/shipment/take', [KuryerController::class , 'kuryer_take_shipment']);
     
+
+
+    
 });
+
+
 
